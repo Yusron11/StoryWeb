@@ -1,0 +1,35 @@
+GET http://localhost:5000/stories
+
+###
+GET http://localhost:5000/stories/1
+
+###
+POST http://localhost:5000/stories
+Content-Type: application/json
+
+{
+    "title": "Laskar pelangi",
+    "author": "Tere liye",
+    "synopsis": "Mimpi adalah kunci",
+    "category": "Technology",
+    "tags": "tag1, tag2, tag3",
+    "status": "Draft"
+}
+
+
+###
+PATCH  http://localhost:5000/stories/1
+Content-Type: application/json
+
+{
+    "title": "Negeri 5 Menara",
+    "author": "Ahmad Fuadi",
+    "synopsis": "Man Jadda Wa Jadda",
+    "category": "Technology",
+    "tags": "tag1, tag2, tag3",
+    "status": "Draft"
+}
+
+
+###
+DELETE  http://localhost:5000/stories/1
