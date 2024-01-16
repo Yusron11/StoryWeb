@@ -99,8 +99,7 @@ const StoryList = () => {
                                             value={filterOptions.category}
                                             onChange={(e) => setFilterOptions({ ...filterOptions, category: e.target.value })}
                                         >
-                                            {/* Options for category filter */}
-                                            {/* You may want to fetch these dynamically */}
+                                        
                                             <option value="All">All</option>
                                             <option value="Financial">Financial</option>
                                             <option value="Technology">Technology</option>
@@ -115,8 +114,7 @@ const StoryList = () => {
                                             value={filterOptions.status}
                                             onChange={(e) => setFilterOptions({ ...filterOptions, status: e.target.value })}
                                         >
-                                            {/* Options for status filter */}
-                                            {/* You may want to fetch these dynamically */}
+                                        
                                             <option value="All">All</option>
                                             <option value="Draft">Draft</option>
                                             <option value="Publish">Publish</option>
@@ -158,7 +156,9 @@ const StoryList = () => {
                         {stories.map((story, index) =>(
                             <tr key = {story.id}>
                                 <td>{index +1}</td>
-                                <td>{story.title}</td>
+                                <td>
+                                    <Link to={`detail/${story.id}`} className="text-dark">{story.title}</Link>
+                                </td>
                                 <td>{story.author}</td>
                                 <td>{story.category}</td>
                                 <td>{story.tags}</td>

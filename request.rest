@@ -8,11 +8,11 @@ POST http://localhost:5000/stories
 Content-Type: application/json
 
 {
-    "title": "Laskar pelangi",
-    "author": "Tere liye",
-    "synopsis": "Mimpi adalah kunci",
+    "title": "Developing Android Apps",
+    "author": "Ahmad Yusron",
+    "synopsis": "read and practice to become a software developer",
     "category": "Technology",
-    "tags": "tag1, tag2, tag3",
+    "tags": "Best, Fun",
     "status": "Draft"
 }
 
@@ -22,14 +22,47 @@ PATCH  http://localhost:5000/stories/1
 Content-Type: application/json
 
 {
-    "title": "Negeri 5 Menara",
+    "title": "Crypto Master",
     "author": "Ahmad Fuadi",
-    "synopsis": "Man Jadda Wa Jadda",
-    "category": "Technology",
-    "tags": "tag1, tag2, tag3",
+    "synopsis": "learning and trading every day is key",
+    "category": "Financial",
+    "tags": "Profitable, Fun",
     "status": "Draft"
 }
 
 
 ###
 DELETE  http://localhost:5000/stories/1
+
+
+###
+GET http://localhost:5000/chapters
+
+###
+GET http://localhost:5000/chapters/1
+
+###
+POST http://localhost:5000/chapters
+Content-Type: application/json
+
+{
+    "title": "Android Fundamental",  
+    "chapter_story": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",  
+    "story_id": 1
+}
+
+
+
+###
+PATCH  http://localhost:5000/chapters/1
+Content-Type: application/json
+
+{
+    "title": "Supplay and Demand",  
+    "chapter_story": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",  
+    "story_id": 2
+}
+
+
+###
+DELETE  http://localhost:5000/chapters/1
